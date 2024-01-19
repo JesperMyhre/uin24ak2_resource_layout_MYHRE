@@ -94,3 +94,41 @@ const resources = [
         ]
     },
 ]
+
+
+//funksjon som bygger HTML basert på index fra array, index valgt basert på medsendt parameter på knappene
+function pushResource(index) {
+const resourceContainer = document.getElementById('container');
+let resource = resources[index];
+
+let html = `
+<h2>${resource.category}</h2>
+<p>${resource.text}</p>
+<ul>`;
+
+resource.sources.forEach(source => {
+  html += `<li><a href="${source.url}">${source.title}</a></li>`
+});
+
+html += `</ul>`;
+resourceContainer.innerHTML = html;
+}
+
+//lytter etter trykk, legger til 'selected' class til knapp trykket, fjerner 'selected' fra de andre knappene etter nytt trykk
+//her måtte jeg bøye meg og bruke chatGPT
+//prompt: "I need some javascript code that adds a "selected" class to a list element. When clicking one of the other list elements, the "selected" class should be removed from the previously selected list element and added to the one most recently clicked instead."
+document.addEventListener('DOMContentLoaded', function() {
+  let selectedButtons = document.querySelectorAll('#listCategory li');
+
+  selectedButtons.forEach(function(item) {
+    item.addEventListener('click', function() {
+
+    let previouslySelected = document.querySelector('.selected');
+    if(previouslySelected) {
+      previouslySelected.classList.remove('selected')
+    }
+
+    item.classList.add('selected')
+    })
+  })
+})

@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" media="all">
-    <script src="ressurser.js"></script>
+  <link href="style.css" rel="stylesheet" media="all">
 </head>
 <body>
-    <div class="main">
-        <nav>
-            <ul>
-                <li class="nav-button">HTML</li>
-                <li class="nav-button">CSS</li>
-                <li class="nav-button">JAVASCRIPT</li>
-                <li class="nav-button">REACT</li>
-                <li class="nav-button">Sanity og headless CMS</li>
-            </ul>
-        </nav>
-        <article>
-            
-        </article>
-    </div>
-</body>
-</html>
+  <nav>
+      <ul id="listCategory">
+          <li class="nav-button" onclick="pushResource(0)">HTML</li>
+          <li class="nav-button" onclick="pushResource(1)">CSS</li>
+          <li class="nav-button" onclick="pushResource(2)">JAVASCRIPT</li>
+          <li class="nav-button" onclick="pushResource(3)">REACT</li>
+          <li class="nav-button" onclick="pushResource(4)">Sanity og headless CMS</li>
+      </ul>
+  </nav>
+    <main>
+        <section id="container"></section>
+      </main>
+    <script src="ressurser.js"></script>
+  </body>
+  </html>
