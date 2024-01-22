@@ -11,22 +11,24 @@
 }
 
 /*NAV*/
-nav {
+nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  box-sizing: border-box;
   width: var(--maxSize);
   min-width: 80%;
+
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
   display: inline;
-  
-  list-style-type: none;
   cursor: pointer;
   background-color: var(--darkblue);
   color: var(--white);
-  font-weight: 600;
-  padding: 1rem 2rem;
+  font-weight: 800;
+  padding: 1.2rem 3.25rem;
 }
 
 .selected {
@@ -34,7 +36,7 @@ nav li {
   color: black;
 }
 
-/**/
+/*MAIN*/
 
 main {
   background-color: white;
@@ -44,17 +46,17 @@ main {
 body {
   display: inline-flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   background-color: var(--gray);
   font-family: var(--font);
   margin: 0;
-  padding: 50px 0;
+  padding: 2rem 0;
 }
 
 #container {
-  padding: 2rem;
+  padding: 4rem 3rem;
   min-width: 80%;
 }
 
