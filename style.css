@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
-  --white: #ffffff;
   --darkblue: #2A324B;
   --lightblue: #58699D;
   --gray: #E1E5EE;
+  --white: #ffffff;
 
   --font: 'Montserrat', 'arial';
   --maxSize: 1000px;
 }
 
+html {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
 /*NAV*/
+
 nav ul {
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
-  width: var(--maxSize);
-  min-width: 80%;
 
   margin: 0;
   padding: 0;
@@ -27,7 +32,7 @@ nav li {
   cursor: pointer;
   background-color: var(--darkblue);
   color: var(--white);
-  font-weight: 800;
+  font-weight: 700;
   padding: 1.2rem 3.25rem;
 }
 
@@ -35,6 +40,7 @@ nav li {
   background-color: var(--white);
   color: black;
 }
+
 
 /*MAIN*/
 
@@ -44,11 +50,6 @@ main {
 }
 
 body {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
   background-color: var(--gray);
   font-family: var(--font);
   margin: 0;
@@ -59,5 +60,3 @@ body {
   padding: 4rem 3rem;
   min-width: 80%;
 }
-
-
